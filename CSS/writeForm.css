@@ -1,0 +1,96 @@
+.form_area {
+  width: 100%;
+  padding: 30px;
+}
+
+.kanban_board {
+  /* background: blue; */
+  padding: 30px 0;
+}
+
+.list_area {
+  width: 100%;
+  min-height: 100px;
+  padding: 20px 0;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cards .card {
+  position: relative;
+}
+
+.cards .card .btn_area {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 5px;
+  top: 12px;
+  display: none;
+}
+
+.cards .card .btn_area button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards .card:hover .btn_area {
+  display: flex;
+}
+
+.modal_wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.modal_wrap .modal_contents {
+  position: fixed;
+  top: 30%;
+  left: 25%;
+  width: 50%;
+  background: white;
+}
+
+.modal_wrap .modal_contents > button {
+  position: absolute;
+  right: 0;
+  top: -30px;
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+
+.modal_wrap .modal_contents .modal_header {
+  background: #eeeeee;
+  padding: 20px;
+  margin: 0;
+}
+
+.modal_wrap .modal_contents .modal_body {
+  padding: 20px;
+}
+
+.modal_wrap .modal_contents .modal_footer {
+  padding: 20px;
+  background: #eeeeee;
+}
+
+.modal_body label {
+  display: block;
+}
+
+.ui .row {
+  width: 100%;
+}
