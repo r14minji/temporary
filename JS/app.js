@@ -8,7 +8,7 @@ import {
   $ModifyModal,
 } from "./component.js";
 
-import { createDate, cardDelet } from "./utils/utils.js";
+import { createDate, cardDelete } from "./utils/utils.js";
 
 const todos = JSON.parse(localStorage.getItem("todos")) || [];
 const usings = JSON.parse(localStorage.getItem("usings")) || [];
@@ -68,7 +68,7 @@ const render = () => {
   usingUl.innerHTML = cardRender(usings, "usings");
   doneUl.innerHTML = cardRender(dones, "dones");
 
-  
+  cardDelete("todos", todos)
 };
 
 render();
