@@ -62,11 +62,13 @@ const render = () => {
   FromEvt();
 
   const todoUl = document.querySelector(".todo .list_area");
-  todoUl.innerHTML = cardRender(todos, "todos");
   const usingUl = document.querySelector(".using .list_area");
-  usingUl.innerHTML = cardRender(usings, "usings");
   const doneUl = document.querySelector(".done .list_area");
+  todoUl.innerHTML = cardRender(todos, "todos");
+  usingUl.innerHTML = cardRender(usings, "usings");
   doneUl.innerHTML = cardRender(dones, "dones");
+
+  
 };
 
 render();

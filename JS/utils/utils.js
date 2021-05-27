@@ -24,3 +24,7 @@ export const createDate = () => {
 // 클릭 이벤트를 실행한다. 여러개 중에 각각에 이벤트를 걸어야하기 때문에 foreach를 사용한다.
 // 이벤트는 버튼 클릭시, i번째 버튼으로부터 1개가 삭제된다.
 // todos, todos
+
+const cardDelet = () => {
+  
+}
