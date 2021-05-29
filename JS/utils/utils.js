@@ -39,3 +39,31 @@ export const cardDelete = (area, list, render) => {
     });
   });
 };
+
+// nextCard
+export const nextCard = (prevList, nextList, prevArea, nextArea, render) => {
+  const nextBtn = document.querySelectorAll(`.${prevArea}.next`);
+  [...nextBtn].forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      nextList.push(prevList[i]);
+      prevList.splice(i, 1);
+      localStorage.setItem(prevArea, JSON.stringify(prevList));
+      localStorage.setItem(nextArea, JSON.stringify(nextList));
+      render();
+    });
+  });
+};
+
+// prevCard
+export const prevCard = (prevList, nextList, prevArea, nextArea, render) => {
+  const prevBtn = document.querySelectorAll(`.${prevArea}.prev`);
+  [...prevBtn].forEach((btn, i) => {
+    btn.addEventListener("click", () => {
+      nextList.push(prevList[i]);
+      prevList.splice(i, 1);
+      localStorage.setItem(prevArea, JSON.stringify(prevList));
+      localStorage.setItem(nextArea, JSON.stringify(nextList));
+      render();
+    });
+  });
+};
