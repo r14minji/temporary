@@ -2,6 +2,12 @@
   background-color: beige;
   padding: 20px;
 }
+.mb-3 {
+  padding: 10px;
+}
+.inputTime {
+  display: flex;
+}
 
 .inputRepeat {
   display: flex;
