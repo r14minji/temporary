@@ -1,0 +1,8 @@
+.form_area {
+  background-color: beige;
+  padding: 20px;
+}
+
+.inputRepeat {
+  display: flex;
+}
