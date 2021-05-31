@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./CSS/workout.css">
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
   <!-- Option 1: Include in HTML -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
   <!-- 합쳐지고 최소화된 최신 CSS -->
@@ -19,39 +20,45 @@
 
 <body>
   <div class="row">
-    <div class="col-md-4">.col-sm-3
-      <legend>Disabled fieldset example</legend>
+    <div class="col-md-4">
+      <legend></legend>
       <form class="form_area">
         <div class="mb-3 row">
-          <label for="inputTitle" class="col-sm-2 col-form-label">title</label>
-          <div class="col-sm-6">
+          <label for="inputTitle" class="col-sm-3 col-form-label">운동명</label>
+          <div class="col-sm-5">
             <input type="text" class="form-control" id="inputTitle" placeholder="운동명을 입력하세요">
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="inputTime" class="col-sm-2 col-form-label">time</label>
-          <div class="col-sm-4 inputTime">
+          <label for="inputTime" class="col-sm-3 col-form-label">운동시간</label>
+          <div class="col-sm-3 inputTime">
             <input type="number" class="form-control" id="inputMinute" placeholder="##">
-            <p>:</p>
-            <input type="number" class="form-control" id="inputSecond" placeholder="##">
+            <p>초</p>
           </div>
         </div>
         <div class="mb-3 row">
-          <label for="inputRepeat" class="col-sm-2 col-form-label">repeat</label>
+          <label for="inputRepeat" class="col-sm-3 col-form-label">세트</label>
           <div class="col-sm-3 inputRepeat">
             <input type="number" class="form-control" id="inputRepeat" placeholder="##">
-            <p>회</p>
+            <p>세트</p>
           </div>
+        </div>
+        <div class="mb-3 row">
+          <h2>전체시간</h2>
         </div>
         <div class="col-auto">
           <button type="submit" class="btn btn-primary">Submit</button>
         </div>
       </form>
     </div>
-    <div class="col-md-4">.col-sm-3
-      <ul class="list-group">
-        <li class="list-group-item">
-          <div class="card" style="width: 18rem;">
+    <!-- 운동리스트 -->
+    <div class="col-md-4">
+      <div class="card" style="width: 100%;">
+        <div class="card-header">
+          Workout List
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
             <div class="btn_area">
               <button class="workout next">
                 <i class="bi bi-check2-circle"></i>
@@ -63,26 +70,55 @@
                 <i class="bi bi-x-square"></i>
               </button>
             </div>
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-            </div>
-          </div>
-        </li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-        <li class="list-group-item">A fourth item</li>
-        <li class="list-group-item">And a fifth one</li>
-      </ul>
-
-
-
-
+            <div class="contents_area">
+              <div class="card-body">
+                <h5 class="card-title">달리기</h5>
+                <p class="card-text"> 1분 30초</p>
+                <p class="card-text"> 3회</p>
+              </div>
+            </div> 
+          </li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+      </div>
     </div>
-    <div class="col-md-4">.col-sm-3
-
+    <!-- 체크리스트 -->
+    <div class="col-md-4">
+      <div class="card" style="width: 100%;">
+        <div class="card-header">
+          Check List
+        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="btn_area">
+              <button class="workout next">
+                <i class="bi bi-check2-circle"></i>
+              </button>
+              <button class="workout modify">
+                <i class="bi bi-pencil-square"></i>
+              </button>
+              <button class="workout delete">
+                <i class="bi bi-x-square"></i>
+              </button>
+            </div>
+            <div class="contents_area">
+              <div class="card-body">
+                <h5 class="card-title">달리기</h5>
+                <p class="card-text"> 1분 30초</p>
+                <p class="card-text"> 3회</p>
+              </div>
+            </div> 
+          </li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">A fourth item</li>
+          <li class="list-group-item">And a fifth one</li>
+        </ul>
+      </div>
+    </div>
     </div>
   </div>
 </body>
